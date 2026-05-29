@@ -1,0 +1,55 @@
+[
+  {
+    "id": "lesson-01-q1",
+    "type": "multiple-choice",
+    "prompt": "Choose the best response: Nice to meet you.",
+    "choices": [
+      "Nice to meet you, too.",
+      "I am twelve apples.",
+      "Yes, I can from Japan.",
+      "On Monday blue."
+    ],
+    "answer": "Nice to meet you, too.",
+    "explanation": "When someone says “Nice to meet you,” a natural response is “Nice to meet you, too.”"
+  },
+  {
+    "id": "lesson-01-q2",
+    "type": "fill-blank",
+    "prompt": "Fill in the blank: I _____ from Japan.",
+    "answer": ["am", "'m"],
+    "explanation": "Use “am” with “I”: I am from Japan. The short form “I'm” is also correct."
+  },
+  {
+    "id": "lesson-01-q3",
+    "type": "multiple-choice",
+    "prompt": "Choose the correct sentence.",
+    "choices": [
+      "She is my friend.",
+      "She are my friend.",
+      "She am my friend.",
+      "She be my friend."
+    ],
+    "answer": "She is my friend.",
+    "explanation": "Use “is” with “she,” “he,” or “it.”"
+  },
+  {
+    "id": "lesson-01-q4",
+    "type": "fill-blank",
+    "prompt": "Fill in the blank: We _____ classmates.",
+    "answer": ["are", "'re"],
+    "explanation": "Use “are” with “we,” “you,” and “they.”"
+  },
+  {
+    "id": "lesson-01-q5",
+    "type": "multiple-choice",
+    "prompt": "What does “How are you?” usually ask about?",
+    "choices": [
+      "Someone's condition or feeling",
+      "Someone's birthday",
+      "Someone's phone number",
+      "Someone's favorite color only"
+    ],
+    "answer": "Someone's condition or feeling",
+    "explanation": "“How are you?” is a common greeting that asks about a person's condition or feeling."
+  }
+]

@@ -1,0 +1,248 @@
+:root {
+  color: #1d2433;
+  background: #f4f7fb;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  font-synthesis: none;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  background: #2454d6;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0.8rem 1.2rem;
+  transition:
+    background 150ms ease,
+    transform 150ms ease;
+}
+
+button:hover:not(:disabled) {
+  background: #173fa9;
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.app-shell {
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 1rem;
+}
+
+.hero-card,
+.card {
+  background: #ffffff;
+  border: 1px solid #dbe4f0;
+  border-radius: 24px;
+  box-shadow: 0 18px 50px rgba(29, 36, 51, 0.08);
+  margin: 1rem 0;
+  padding: clamp(1.2rem, 4vw, 2.2rem);
+}
+
+.hero-card {
+  background: linear-gradient(135deg, #ffffff 0%, #eaf1ff 100%);
+}
+
+.eyebrow {
+  color: #2454d6;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 8vw, 4.5rem);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 4vw, 2rem);
+}
+
+.intro {
+  color: #4d5a70;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  max-width: 620px;
+}
+
+.error-message {
+  background: #ffe8e6;
+  border: 1px solid #ffbbb4;
+  border-radius: 16px;
+  color: #9f1f12;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+.lesson-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.lesson-card {
+  align-items: center;
+  background: #f8fbff;
+  border: 1px solid #dbe4f0;
+  border-radius: 18px;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.lesson-card p {
+  color: #5c687c;
+  margin-bottom: 0;
+}
+
+.quiz-header {
+  color: #5c687c;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 700;
+  gap: 0.75rem;
+  justify-content: space-between;
+}
+
+.answer-options {
+  display: grid;
+  gap: 0.8rem;
+  margin: 1.5rem 0;
+}
+
+.answer-options button {
+  background: #ffffff;
+  border: 2px solid #cbd8ec;
+  border-radius: 16px;
+  color: #1d2433;
+  padding: 1rem;
+  text-align: left;
+}
+
+.answer-options button.selected {
+  background: #eaf1ff;
+  border-color: #2454d6;
+  color: #173fa9;
+}
+
+.blank-answer-label {
+  color: #4d5a70;
+  display: grid;
+  font-weight: 700;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.blank-answer-label input {
+  border: 2px solid #cbd8ec;
+  border-radius: 14px;
+  color: #1d2433;
+  font-size: 1.1rem;
+  padding: 0.9rem 1rem;
+  width: 100%;
+}
+
+.primary-action {
+  margin-top: 0.5rem;
+}
+
+.feedback {
+  border-radius: 18px;
+  margin-top: 1.5rem;
+  padding: 1rem;
+}
+
+.feedback.correct {
+  background: #e8f8ee;
+  border: 1px solid #a6dfb9;
+}
+
+.feedback.incorrect {
+  background: #fff1e6;
+  border: 1px solid #ffc895;
+}
+
+.feedback button {
+  margin-top: 0.5rem;
+}
+
+.score {
+  color: #2454d6;
+  font-size: clamp(2.2rem, 8vw, 4rem);
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+}
+
+.review-list {
+  display: grid;
+  gap: 1rem;
+  padding-left: 1.4rem;
+}
+
+.review-list li {
+  background: #f8fbff;
+  border: 1px solid #dbe4f0;
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.review-question {
+  font-weight: 800;
+}
+
+.result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    padding: 0.5rem;
+  }
+
+  .lesson-card,
+  .result-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}

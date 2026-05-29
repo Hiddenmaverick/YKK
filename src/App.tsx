@@ -54,6 +54,7 @@ function App() {
     async function loadLessons() {
       try {
         const response = await fetch(getDataUrl("lessons.json"));
+        const response = await fetch(`${import.meta.env.BASE_URL}data/lessons.json`);
 
         if (!response.ok) {
           throw new Error("Could not load the lesson list.");
@@ -93,6 +94,7 @@ function App() {
       const response = await fetch(
         getDataUrl(`questions/${lesson.questionFile}`),
       );
+      const response = await fetch(`${import.meta.env.BASE_URL}data/questions/${lesson.questionFile}`);
 
       if (!response.ok) {
         throw new Error(`Could not load questions for ${lesson.title}.`);

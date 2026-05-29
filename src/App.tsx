@@ -3,6 +3,10 @@ import type { AnswerRecord, Lesson, Question } from "./types";
 
 type QuizStatus = "choosing" | "loading" | "active" | "finished";
 
+function getDataUrl(path: string): string {
+  return `${import.meta.env.BASE_URL}data/${path}`;
+}
+
 function shuffleArray<T>(items: T[]): T[] {
   const shuffled = [...items];
 
@@ -49,6 +53,7 @@ function App() {
   useEffect(() => {
     async function loadLessons() {
       try {
+        const response = await fetch(getDataUrl("lessons.json"));
         const response = await fetch(`${import.meta.env.BASE_URL}data/lessons.json`);
 
         if (!response.ok) {
@@ -86,6 +91,9 @@ function App() {
     setCurrentQuestionIndex(0);
 
     try {
+      const response = await fetch(
+        getDataUrl(`questions/${lesson.questionFile}`),
+      );
       const response = await fetch(`${import.meta.env.BASE_URL}data/questions/${lesson.questionFile}`);
 
       if (!response.ok) {
